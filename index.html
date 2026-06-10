@@ -1,1 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Forte, Futuro Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <header>
+        <div class="header-container">
+            <h1>Agro Sustentável</h1>
+            <nav>
+                <button id="toggle-theme" aria-label="Alternar modo escuro">Alternar Modo</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <h2>Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente</h2>
+            <p>Descubra como a tecnologia e as práticas ecológicas caminham juntas para garantir a segurança alimentar protegendo os nossos recursos naturais.</p>
+        </section>
+
+        <section class="content-section">
+            <h3>Pilares da Sustentabilidade no Campo</h3>
+            <div class="cards-container">
+                <div class="card" id="card-1">
+                    <h4>Rotação de Culturas</h4>
+                    <p>Preserva os nutrientes do solo e evita o desgaste da terra.</p>
+                </div>
+                <div class="card" id="card-2">
+                    <h4>Tecnologia no Campo</h4>
+                    <p>Drones e sensores que evitam o desperdício de água e insumos.</p>
+                </div>
+            </div>
+            
+            <div class="interactive-box">
+                <h4>Simulador de Impacto Positivo</h4>
+                <p>Clique no botão para ver o impacto simulado de árvores plantadas por hectares sustentáveis:</p>
+                <p class="counter-text">Árvores simuladas: <span id="tree-counter">0</span></p>
+                <button id="btn-impact" class="btn-primary">Simular Plantio</button>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h3>Faça Parte dessa Mudança</h3>
+            <p>Receba informativos e dicas de práticas agrícolas sustentáveis.</p>
+            
+            <form id="newsletter-form">
+                <div class="form-group">
+                    <label for="username">Seu Nome:</label>
+                    <input type="text" id="username" required placeholder="Digite seu nome completo">
+                </div>
+                <div class="form-group">
+                    <label for="useremail">Seu E-mail:</label>
+                    <input type="email" id="useremail" required placeholder="nome@exemplo.com">
+                </div>
+                <button type="submit" class="btn-submit">Inscrever-se</button>
+            </form>
+            
+            <div id="form-feedback" class="hidden"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Desenvolvido para o Concurso Agrinho. Conteúdo 100% autoral.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
