@@ -1,0 +1,190 @@
+/* Variáveis para transição de cores (Modo Claro/Escuro) */
+:root {
+    --bg-color: #f4f9f4;
+    --text-color: #2c3e50;
+    --card-bg: #ffffff;
+    --primary-color: #27ae60;
+    --primary-hover: #219653;
+    --accent-color: #e67e22;
+    --transition-speed: 0.3s;
+}
+
+[data-theme="dark"] {
+    --bg-color: #121812;
+    --text-color: #e0e0e0;
+    --card-bg: #1e271e;
+    --primary-color: #2ecc71;
+    --primary-hover: #27ae60;
+}
+
+/* Configurações Gerais e Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header e Navegação */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#toggle-theme {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#toggle-theme:hover {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+/* Main Content Layout com Flexbox */
+main {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.hero-section {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.hero-section h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.cards-container {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    flex: 1;
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Área Interativa e Botões com Efeito Hover */
+.interactive-box {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 3rem;
+    border: 1px solid var(--primary-color);
+}
+
+.counter-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    color: var(--accent-color);
+}
+
+.btn-primary, .btn-submit {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color var(--transition-speed);
+}
+
+.btn-primary:hover, .btn-submit:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+/* Formulário Semântico */
+.form-section {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input {
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Elementos Utilitários do JS */
+.hidden {
+    display: none;
+}
+
+#form-feedback {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 4px;
+    background-color: rgba(39, 174, 96, 0.2);
+    text-align: center;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--card-bg);
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Responsividade - Media Queries para Telas Menores (Celulares/Tablets) */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .cards-container {
+        flex-direction: column;
+    }
+}
